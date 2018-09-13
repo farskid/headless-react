@@ -1,23 +1,253 @@
-import { Head } from 'mdx-deck'
-
+import { Appear } from 'mdx-deck'
 export { default as theme } from './theme'
 
-<Head>
-  <title>Presentation Title</title>
-</Head>
-
-# Hello
+# Hello Folks 👋
 
 ---
 
-## Edit this file
+# Farzad YZ
 
-To create your presentation
+Software Engineer
 
-```notes
-- Create speaker notes in fenced code blocks
+- Javascript: React, State Managements, Node.js
+- Open Source (🙏 Github)
+- FP: Elm, Reason
+
+---
+
+# Where to find me
+
+- Twitter: [@Farzad_YZ](https://twitter.com/@farzad_yz)
+- Medium : [@Farzad_YZ](https://medium.com/@farzad_yz)
+- Website: [farzadyz.com](https://farzadyz.com)
+
+---
+
+# Headless React
+
+---
+
+![Headless](assets/headless.jpg)
+
+---
+
+## It's all about render
+
+```js
+
+class MyComponent extends React.Component {
+  render() {
+    // Render here
+  }
+}
+
 ```
 
+`render`: the only required method
+
 ---
 
-<https://github.com/jxnblk/mdx-deck>
+## It's all about rendering
+
+- Delrataive renderings
+- Not a framework but a rendering library
+
+---
+
+## It's all about rendering
+
+![thinking-react.png](assets/thinking-react.png)
+- Thinking in React === Thinking about different rendering sections
+
+---
+
+## It's all about rendering
+
+- Render based on props vs Render based on props and state
+- Statefull vs Stateless, Container vs Component, Dumb vs Smart
+
+---
+
+![meme1](assets/meme1.jpg)
+
+---
+
+What if I told you, React is
+>NOT ONLY FOR RENDERING
+
+?
+
+---
+
+# What the heck does HEADLESS mean?
+
+Headless ~ Renderless
+
+No Rendering === No GUI
+
+---
+
+# Headless in React
+
+- Render nothing! `return null`
+- Delegate rendering (Render Props) `this.props.children(...args)`
+- Decorating (HOC) `withRouter` `connect`
+
+---
+
+# Story Time
+
+© Merrick Christensen
+
+![popcorn.gif](assets/popcorn.gif)
+
+---
+
+## Basic CoinFlip
+
+![](assets/simple-1.png)
+
+---
+
+
+## Support images
+
+![](assets/simple-2.png)
+
+---
+
+# Re-use in Blog
+
+Bring back Tails and Heads text for SEO
+
+- Support 2 usecases with different implementations
+
+---
+
+![](assets/1.png)
+
+---
+
+## Add reflip button ONLY in the app
+
+- Add a button to flip again on click
+
+---
+
+![](assets/2.1.png)
+
+---
+
+![](assets/2.2.png)
+
+---
+
+###  The co-worker disaster Happens!
+
+Your coworker comes by and wants to re-use your CoinFlip component for new usecase `<DiceRoll />`
+
+- Totally different interface
+- Also be used in both app and blog
+- Totally different odd! (diceroll in 1/6 but coinflip is 1/2)
+
+---
+
+# Now What?
+
+- Sorry, go dice yourself.
+- Add DiceRoll to CoinFlip too!
+
+(🔉 Crushing barebones sound in the background)
+
+
+---
+
+# Headless Component enters
+
+Let's decouple the logic from rendering.
+
+---
+
+![](assets/3.png)
+
+---
+
+![](assets/4.png)
+
+---
+
+![](assets/5.png)
+
+---
+
+![](assets/6.png)
+
+---
+
+![](assets/7.png)
+
+---
+
+![](assets/8.png)
+
+---
+
+## Sum up the Story
+
+- Probability, 1st abstraction, Headless (different odds)
+- CoinFlip and DiceRolle, 2nd abstraction, Still Headless (different implementations)
+- BlogCoinFlip, AppCoinFlip, BlogDiceRoll, AppDiceRoll
+
+---
+
+# Advantages
+
+- Separation of concerns
+- Easier to reason about
+- Easier to test
+- Decoupling === (maintainable, small learning curve)
+- Reusable, Composable
+- Scalable for change of requirements
+
+---
+
+# Disadvantages
+
+- Same as other abstractions
+- Implementation cost (time, code size)
+- Cost of indirection
+- Codebase learning curve
+
+---
+
+# When to use?
+
+Like any other abstractions, when the benefits weigh more than the costs.
+
+---
+
+# What to cover with this pattern?
+
+- Declarative Side effects (fetch, logging, timers, Web Speech, Geolocation, WebRTC handlers, ...)
+- Separating Logics (Abstract logics, State moderation)
+- Declatarive data structures (Map, set, WeakMap, List)
+
+---
+
+# What to cover with this pattern?
+
+- Declarative feedbacks (Hover, Focus, Active)
+- Declarative Form Data (!!)
+- Declarative State reducers, state selectors (Redux in React 😱)
+
+---
+
+# Realworld examples
+
+- [DownShift, accessible react component](https://github.com/paypal/downshift)
+
+- [React PowerPlug, renderless containers](https://github.com/renatorib/react-powerplug)
+
+---
+
+# Thanks for being patient ❤️
